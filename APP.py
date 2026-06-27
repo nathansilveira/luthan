@@ -18,7 +18,7 @@ if not st.session_state['autenticado']:
     
     with col_imagem:
         # Caminho da imagem da tela inicial que você já configurou
-        caminho_da_imagem = r"C:\Users\Nathan\Desktop\Luthan_Investimentos\capa.png.png"
+        caminho_da_imagem = st.image("capa.png")
         
         try:
             st.image(caminho_da_imagem, use_container_width=True)
