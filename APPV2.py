@@ -275,6 +275,22 @@ else:
 
     st.sidebar.success("Bem-vindo, **Thiago Moreno**!")
 
+    st.sidebar.markdown(
+        """
+        <a href="https://chat.whatsapp.com/E5KiruZrte3LKkinzk8MWm" target="_blank" style="text-decoration: none;">
+            <div style="
+                display: flex; align-items: center; justify-content: center; gap: 8px;
+                background-color: #25D366; color: #0B0B0B; font-weight: 600; font-size: 14px;
+                padding: 8px 14px; border-radius: 8px; margin-bottom: 10px;
+                border: 1px solid #1DA851;
+            ">
+                💬 Fale com um consultor
+            </div>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
+
     if st.sidebar.button("Sair do Sistema"):
         st.session_state['autenticado'] = False
         st.rerun()
@@ -361,6 +377,23 @@ else:
     # 6. INTERFACE DO DASHBOARD
     # ------------------------------------------------------------
     st.markdown(f"<h1 style='color: #C5A059;'>🏢 Análise de Viabilidade - {imovel_selecionado}</h1>", unsafe_allow_html=True)
+
+    WHATSAPP_GRUPO_URL = "https://chat.whatsapp.com/E5KiruZrte3LKkinzk8MWm"
+    st.markdown(
+        f"""
+        <a href="{WHATSAPP_GRUPO_URL}" target="_blank" style="text-decoration: none;">
+            <div style="
+                display: inline-flex; align-items: center; gap: 10px;
+                background-color: #25D366; color: #0B0B0B; font-weight: 600;
+                padding: 10px 20px; border-radius: 8px; margin-bottom: 10px;
+                border: 1px solid #1DA851;
+            ">
+                💬 Fale com nossos consultores no WhatsApp
+            </div>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
 
     st.markdown("---")
     st.subheader("✉️ Personalized Messages from our Team")
